@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>About - SSB Soft</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="images/favicon.ico" rel="Shortcut icon" />
+	<!--Font-->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Montserrat:600" rel="stylesheet">
+	<!-- Css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 50) {
+					$(".navbar img").attr("src", "images/ssbsoft.png");
+					$('.navbar-light .navbar-nav .nav-link')
+						.addClass('text-dark')
+						.removeClass('text-light');
+					// $('.icon-bar')
+					// 	.addClass('bg-dark')
+					// 	.removeClass('bg-light');
+					$('nav').addClass('shadow-sm bg-white');
+				} else {
+					var x = window.matchMedia("(min-width: 992px)");
+					//$(".navbar img").attr("src", "images/ssbsoft_white.png");
+					if (x.matches == true) {
+						// $('.navbar-light .navbar-nav .nav-link')
+						// 	.addClass('text-light')
+						// 	.removeClass('text-dark');
+					}
+					$('nav').removeClass('shadow-sm bg-white');
+					// $('.icon-bar')
+					// 	.addClass('bg-light')
+					// 	.removeClass('bg-dark');
+				}
+			})
+		})
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 50) {
+					$('#back-to-top').fadeIn();
+				} else {
+					$('#back-to-top').fadeOut();
+				}
+			});
+			// scroll body to 0px on click
+			$('#back-to-top').click(function () {
+				$('#back-to-top').tooltip('hide');
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container-fluid">
+			<a href="#" class="ssb-logo"><img src="images/ssbsoft.png"></a>
+			<!-- Collapse button -->
+			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+				data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+				aria-label="Toggle navigation" style="outline: none;">
+				<span class="icon-bar top-bar bg-dark"></span>
+				<span class="icon-bar middle-bar bg-dark"></span>
+				<span class="icon-bar bottom-bar bg-dark"></span>
+			</button>
+
+			<div class="collapse navbar-collapse in width" id="navbarsExampleDefault">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">HOME</a>
+					</li>
+					<!-- <li class="nav-item">
+						<a class="nav-link text-dark" href="service.html">SERVICES</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link text-dark" href="blogs.html">BLOG</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PRODUCTS
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="campinfo.html">CAMPINFO</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="vitalsoft.html">VITALSOFT</a>
+							<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="medshoppe.html">MEDSHOPPE</a>
+						</div>
+						<a class="nav-link text-light" href="products.html">PRODUCTS</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" href="career.html">CAREERS</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">ABOUT US
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link nav-contactus" href="contactus.html">CONTACT US
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Header section-->
+	<header class="about-header">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md">
+					<h2 class="title-font text-dark">About SSB</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- About us section-->
+	<section class="about-us-header">
+		<div class="container">
+			<!-- <h2 class="title-font">SSB Soft</h2> 
+			<div class="spacer-60"></div>-->
+			<div class="row text-justify text-center">
+				<div class="col-md">
+					<p>SSB Soft is formed by a consortium of IT experts from different platforms with a
+						collective experience of more than 20 years to deliver world class solutions for all
+						your IT needs across all platforms in almost all new and advanced technologies.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About us section-->
+	<section class="about-us">
+		<div class="container text-center">
+			<div class="row text-justify">
+			<div class="col-md-4 align-self-center">
+					<img src="images/REC-2.png" style="width: 95%">
+				</div>
+				<div class="col-md-8">
+					<h2 class="title-font pt-3">Magalingam Jayagopal</h2>
+					<h5 class="subtitle-font">Founder & CEO</h5>
+					<div><a class="btn link-pro px-3 mb-3" style="margin-top: 1%" href="http://in.linkedin.com/pub/magalingam-jayagopal/6/296/aa8" target="_blank">LinkedIn Profile<i class=" pl-2 fa fa-arrow-right"></i></a></div>
+					<p>Mali is an IT professional of repute with more than 2 decade experience in IT and manufacturing
+						Industry. He strongly believes in Team work and has a passion to update to new
+						technologies.<br /><br />
+						He worked in senior positions like Vice-President in some of the leading software companies in
+						Chennai.
+						He is a health care domain expert with more than 10 years of experience in Health care IT areas
+						like
+						Hospital
+						Information Systems, Electronic Health Records, Healthcare Business Intelligence, Health
+						Insurance,
+						Disease Management, Web health portals. He has designed and implemented healthcare Software
+						solutions
+						for more than 70 hospitals across India. He advises many companies on Public Relations and at
+						times plays
+						a vital role in enriching their business associations and strengthening their relationship with
+						clients.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- About us section-->
+	<section class="about-us-director">
+		<div class="container text-center">
+			<div class="row text-justify">
+				<div class="col-md-6">
+					<h2 class="title-font pb-4">Director- Technical</h2>
+					<p>Mr. Ramesh Shanmugam is an IT professional with more than 15 yrs experience in development,
+						design and performance tuning. As Director- Technical, he heads our design and implementation
+						team.<br /><br />
+						His experience in working with both start-ups and IT majors has given him the understanding of
+						the
+						challenges faced by early stage and midsize companies. At the same time he is also aware of the
+						processes in corporate companies.<br /><br />
+						His availability in US has given us the edge to coordinate with the clients in a smooth and
+						effective manner.
+						Ramesh has a Bachelor degree in Engineering from Anna University.</p>
+				</div>
+				<div class="col-md text-justify">
+					<h2 class="title-font pb-4">Team of Techno Tribes</h2>
+					<p>SSB IT experts consortium has built engineering teams with people having deadly passion
+						and attitude towards technologies. These team of excellence has been formed in all major
+						technology platforms like Java, Mircrosoft, Ruby on Rails, NodeJs, Mobile, UI Developement,
+						QA and Test Automation. They are keen explorer on new Technologies and they always keep their
+						knowledge base
+						updated.<br /><br />
+						Team forms and follows a different culture to make themself to live in their office rather just
+						to work. This
+						living
+						consciousness tap outs the creativity and strength from every Individual.They simply burst out
+						with fun on
+						working
+						and spread the happiness along with technologies.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our office section-->
+	<footer class="footer">
+		<section class="our-office">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center align-self-center">
+						<a href="#"> <img class="footer-logo" src="images/ssbsoft_white.png"></a>
+						<ul class="social" id="footer-social">
+							<li><a href="https://www.twitter.com/ssb_soft" target="_blank"><i
+										class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/ssbsoft" target="_blank"><i
+										class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/ssbsoft/" target="_blank"><i
+										class="fa fa-facebook"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<p>New No.28, 1st Main Rd, </br>Shenoy Nagar West, </br>Chennai, Tamil Nadu 600030.</p>
+						<ul class="link mb-2">
+							<li><a href="#" style="text-transform: lowercase;"><i
+										class="fa fa-envelope-o"></i>&nbsp;contact@ssbsoft.com</a></li>
+							<li><a href="#"><i class="fa fa-phone left"></i>&nbsp;+91-44-43562324</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div class="spacer-27"></div>
+						<ul class="link">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="career.html">Careers</a></li>
+							<li><a href="about.html">About US</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+							<!-- <li><a href="blogs.html">Blog</a></li> -->
+							<!-- <li><a href="service.html">Why us?</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer section-->
+		<section class="copyright">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md">
+						© 2018 SSB Software Solutions Pvt. Ltd., All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+
+	<!-- Back to top -->
+	<a id="back-to-top" href="#" class="btn back-to-top" role="button" title="Click to return on the top page"
+		data-toggle="tooltip" data-placement="left"><span class="fa fa-chevron-up"></span></a>
+
+</body>
+
+</html>

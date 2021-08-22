@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SSB Soft</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Font-->
+	<link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Montserrat:600,100i" rel="stylesheet">
+
+	<!-- CSS -->
+	<link href="images/favicon.ico" rel="Shortcut icon" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+	<!-- Script -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130352761-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-130352761-1');
+	</script>
+
+	<script>
+		$(function () {
+			$(window).scroll(function () {
+				var x = window.matchMedia("(min-width: 992px)")
+				var silderIndex = $("#myCarousel").find('.active').index();
+				if ($(this).scrollTop() > 150) {
+					$('nav').addClass('shadow-sm bg-white');
+					$(".navbar img").css("visibility", "visible");
+					$('.icon-bar')
+						.addClass('bg-dark')
+						.removeClass('bg-light');
+				} else {
+					$('nav').removeClass('shadow-sm bg-white');
+					$(".navbar img").css("visibility", "hidden");
+				}
+			})
+		})
+
+		$(document).ready(function () {
+			$('#myCarousel').carousel();
+			$(".navbar-toggler.collapsed").click(function () {
+				$("#myCarousel").carousel("pause");
+			});
+		});
+
+	</script>
+	<script>
+		$(document).ready(function () {
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 50) {
+					$('#back-to-top').fadeIn();
+				} else {
+					$('#back-to-top').fadeOut();
+				}
+			});
+			// scroll body to 0px on click
+			$('#back-to-top').click(function () {
+				$('#back-to-top').tooltip('hide');
+				$('body,html').animate({
+					scrollTop: 0
+				}, 800);
+				return false;
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("a").on('click', function (event) {
+				if (this.hash !== "") {
+					event.preventDefault();
+					var hash = this.hash;
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 800, function () {
+						window.location.hash = hash;
+					});
+				}
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$("#client-owl-carousel").owlCarousel({
+				items: 4,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				autoWidth: true,
+				fluidSpeed: 50,
+				autoplayHoverPause: true,
+				responsiveClass: true,
+				dots: false,
+				responsive: {
+					0: {
+						items: 1,
+					},
+					768: {
+						items: 2,
+					},
+					992: {
+						items: 4,
+					}
+				}
+			});
+			$("#testimonies-owl-carousel").owlCarousel({
+				items: 1,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				fluidSpeed: 50,
+				nav: true,
+				autoplayHoverPause: true,
+				responsiveClass: true,
+				navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+				responsive: {
+					0: {
+						items: 1
+					},
+					568: {
+						items: 1
+					},
+					768: {
+						items: 1
+					},
+					992: {
+						items: 1
+					}
+				}
+			});
+			$("#tools-owl-carousel").owlCarousel({
+				items: 1,
+				loop: true,
+				margin: 10,
+				autoplay: true,
+				autoplayTimeout: 5000,
+				autoplaySpeed: 1500,
+				fluidSpeed: 50,
+				autoplayHoverPause: true,
+				singleItem: true,
+				rewind: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container-fluid">
+			<a href="#" class="ssb-logo">
+				<img src="images/ssbsoft.png" style="visibility: hidden;">
+			</a>
+			<!-- Collapse button -->
+			<button class="navbar-toggler collapsed" id="startCarousel" type="button" data-toggle="collapse"
+				data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false"
+				aria-label="Toggle navigation" style="outline: none;">
+				<span class="icon-bar top-bar bg-dark"></span>
+				<span class="icon-bar middle-bar bg-dark"></span>
+				<span class="icon-bar bottom-bar bg-dark"></span>
+			</button>
+
+			<div class="navbar-collapse collapse in width" id="navbarsExampleDefault">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">HOME
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<!--<li class="nav-item">
+						<a class="nav-link" href="service.html">SERVICES</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							PRODUCTS
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="campinfo.html">CAMPINFO</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="vitalsoft.html">VITALSOFT</a>
+							<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="medshoppe.html">MEDSHOPPE</a>
+						</div>
+						<a class="nav-link text-light" href="products.html">PRODUCTS</a> 
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="blogs.html">BLOG</a>
+					</li>-->
+					<li class="nav-item">
+						<a class="nav-link" href="career.html">CAREERS</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="about.html">ABOUT US</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link nav-contactus" href="contactus.html">CONTACT US</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<header class="home-header">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ul class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<!-- <li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li> -->
+			</ul>
+
+			<!-- The slideshow -->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="image-one"></div>
+					<div class="carousel-caption">
+						<img class="text-center" src="images/ssbsoft.png">
+						<div>
+							<h5>PROVIDING</h5>
+							<h2>Sapient Solutions to Business</h2>
+							<h5>with progressive technology competency</h5>
+						</div>
+						<div><a class="btn explore-btn" id="scroll-fun" href="#competency" data-behavior="SmoothScroll"
+								data-target="#competency">Explore More </a></div>
+					</div>
+				</div>
+				<!-- <i class=" fa fa-chevron-right"></i><div class="carousel-item">
+					<div class="image-two"></div>
+					<div class="carousel-caption silde-two">
+						<h5 class="title-font">PROVIDING</h5>
+						<h2>Sapient Solutions to Business</h2>
+						<p class="lead">with progressive technology competence</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-three"></div>
+					<div class="carousel-caption silde-two">
+						<h5 class="title-font">PROVIDING</h5>
+						<h2>Sapient Solutions to Business</h2>
+						<p class="lead">with progressive technology competence</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="image-four"></div>
+					<div class="carousel-caption silde-two">
+						<h5 class="title-font">PROVIDING</h5>
+						<h2>Sapient Solutions to Business</h2>
+						<p class="lead">with progressive technology competence</p>
+					</div>
+				</div>
+			</div> -->
+
+				<!-- Left and right controls -->
+				<!-- <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#myCarousel" data-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</a> -->
+			</div>
+	</header>
+
+	<section class="competency" id="competency">
+		<div class="container text-center">
+			<h2 class="title-font">Our Proficiency</h2>
+			<div class="spacer-60"></div>
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/competency/mobile-y.png" class="pb-2">
+					<h5 class="subtitle-font">Mobile First</h5>
+					<p>Developing mobile responsive web application and native IOS & Android application becomes our
+						reowned mastery as a result of colossal shift in consumer behavior on the mobile driven world.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/full_stack-y.png" class="pb-2">
+					<h5 class="subtitle-font">Full Stack Development</h5>
+					<p>Our exhaustive architectural expertise in all stack layers of development & deep understanding of
+						business processes will help you to take your ideas and turn them into marketable products.</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/professional-y.png" class="pb-2">
+					<h5 class="subtitle-font">Professional Outsourcing</h5>
+					<p>Proved to be a trusted partner for 25+ companies for transferring contractual, ad-hoc employees
+						and project-based recruitment in different state-of-the-art technologies with our flexible
+						model.
+					</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/agile_delivery-y.png" class="pb-2">
+					<h5 class="subtitle-font">Agile Delivery</h5>
+					<p>With concrete agile practices and continuous delivery strategy, we enable rapid development and
+						frequent delivery of software, with continual user involvement and improved user experience.</p>
+				</div>
+			</div>
+			<div class="row pt-4">
+				<div class="col-md-3">
+					<img src="images/competency/cloud-y.png" class="pb-2">
+					<h5 class="subtitle-font">Cloud</h5>
+					<p>End to end operational experience with most of the cloud providers like AWS, Google Cloud in the
+						container and serverless architecture for managing huge application with scalability and high
+						availability.</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/data-analysis-y.png" class="pb-2">
+					<h5 class="subtitle-font">Data Analysis</h5>
+					<p>We make your data to serve, produce, optimize and compete for higher business outcomes by
+						extracting transformative insights and business values out of it with leading big data
+						technologies.</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/machine_learing-y.png" class="pb-2">
+					<h5 class="subtitle-font">Machine Learning</h5>
+					<p>Proficient in training advanced algorithms using cutting-edge deep learning technologies and
+						analytics with computer vision and Natural Language processing to improve your business
+						productivity.</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/competency/iot-y.png" class="pb-2">
+					<h5 class="subtitle-font">IOT</h5>
+					<p>Our pervasive IOT experiences enables you to connect, collect, store, analyse, visualise and act
+						on the device data by addressing enterprise needs to bring improved decision making and user
+						experiences.</p>
+				</div>
+			</div>
+			<div class="row pt-4 text-center" style="display: none;">
+				<div class="col">
+					<a href="service.html" class="btn our-service-btn px-5">View Our Services</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-slider">
+		<div class="container">
+			<div class="clients m-auto position-relative bg-white rounded">
+				<div class="row">
+					<!-- <div class="col-md-4 align-self-center">
+						<h2 class="subtitle-font text-center m-0">Trusted by 50+ companies</h2>
+					</div> -->
+					<!-- <img class="pb-2" src="images/rating-stars.png" style="height:40%; width: 35%;"> -->
+					<div class="col-md-12 text-center clients-image">
+						<h2 class="subtitle-font text-center m-0 pt-3">Trusted by 50+ companies</h2>
+						<div class="client-owl">
+							<div id="client-owl-carousel" class="owl-carousel">
+								<div class="client-logo" style="height: 65px;">
+									<img src="images/client-logo/aes-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 70px;">
+									<img src="images/client-logo/ap&t-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/azzept-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/deepvalue-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/einzton_logo1.png">
+								</div>
+								<div class="client-logo" style="height: 55px;">
+									<img src="images/client-logo/focus1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/gofrugal-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 65px;">
+									<img src="images/client-logo/happihive-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/it-spectra-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 70px;">
+									<img src="images/client-logo/kmms-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/online-homam1.png">
+								</div>
+								<div class="client-logo" style="height: 75px;">
+									<img src="images/client-logo/opentap-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/panasonic-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 60px;">
+									<img src="images/client-logo/regal-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 65px;">
+									<img src="images/client-logo/technofolks-logo1.png">
+								</div>
+								<div class="client-logo" style="height: 70px;">
+									<img src="images/client-logo/wondersoft-logo1.png">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid p-0 m-0">
+			<div class="testimonies-owl">
+				<div id="testimonies-owl-carousel" class="owl-carousel">
+					<div class="item">
+						<p>❝ It has been a good experience working with SSB soft team on one of our products. The
+							team is
+							technically competent and displays a real understanding of our needs and comes to the
+							table with apt
+							solutions.
+							We have outsourced our work few times in the past but working with SSB Soft was pleasant
+							and
+							smooth. They
+							provided skilled resources who proved to be very dedicated to executing our projects,
+							often
+							putting in long
+							hours and producing quality work.
+							We wish SSB Software very best in all their future endeavours ❞</p>
+						<h6 class="text-right" style="font-style: normal;font-size: 1.1em"><b>Mr.Shankar, CEO - Wonder
+								soft</b></h6>
+					</div>
+					<div class="item">
+						<p>❝ SSB Soft team were originally contacted to assist us with the Phase-1. Team were
+							professional and delivered the project in time as we were under an extremely tight
+							deadline.SSb Soft delivery of mission critical projects on time and within
+							budget is the reason
+							we continue to look them for all our development needs.
+							I actively recommend SSB soft to anyone who would like to out source Java development.
+							They are a strong and reliable partner and have added significant value to our
+							business ❞</p>
+						<h6 class="text-right" style="font-style: normal;font-size: 1.1em"><b>Mr. Senthil, CEO -
+								Opentap</b></h6>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="our-product">
+		<div class="container">
+			<h2 class="text-center title-font">Our Expertise</h2>
+			<div class="spacer-60"></div>
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<img src="images/product-logo/health-y.png" class="pb-2" style="height: 99px;" />
+					<h5 class="subtitle-font">Health Care</h5>
+					<p class="pr-1">More than 15 years of experience in providing software solutions for the healthcare
+						industry and have a successful implementation of software in more than 100 hospitals across
+						India. Doctor friendly Electronic Case Sheets with extensive diagnostic analytics addressing
+						most of the clinical departments, highly customisable billing, insurance management solution
+						with business intelligence, information systems for end to end hospital operation and patient
+						relationship management with patient portal mobile solutions are our top solutions.</p>
+				</div>
+				<div class="col-md-6 text-center">
+					<img src="images/product-logo/eduction-product-y.png" class="pb-2" style="height: 102px;" />
+					<h5 class="subtitle-font">Education</h5>
+					<p class="pr-1">Addressing most prominent use case of education domain in last 6 years, we become
+						leading solutions provider in the market. Our constructive solution are handling the billing and
+						end to end operations, Parent relationship management and Online payments, Vehicle tracking
+						system, Exam management and analytics. Camp Info is our customized solution with ERP and
+						integrated Parent relationship mobile app which enables digitilization of inside and out
+						management and seamless updates and effective communication to parents with enhanced parents \
+						student satisfaction.</p>
+				</div>
+			</div>
+			<div class="spacer-60"></div>
+			<h2 class="text-center title-font">Technologies</h2>
+			<!-- <h5 class="subtitle-font text-center pb-3" style="font-size:1.8em">Technologies</h5> -->
+			<div class="spacer-60"></div>
+			<div class="owl-carousel" id="tools-owl-carousel">
+				<div class="lang">
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/java.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/ruby.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/python.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/c-sharp.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/go-lang.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/elixir.png" style="padding: 2px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/node-js.png" style="padding: 3px;" />
+					</div>
+					<h6 class="subtitle-font pt-3 tools-font" style="padding-left: 6px;">Language</h6>
+				</div>
+				<div class="back-end">
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/spring.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/rails.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/django.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/colors.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/phoneix-framwork.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/dot-net-1.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/expressjs.png" />
+					</div>
+					<h6 class="subtitle-font pt-3 tools-font" style="padding-left: 6px;">Back-End</h6>
+				</div>
+				<div class="front-end">
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/vue.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/react.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/angularjs.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/bootstrap.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/typescript.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/javascript.png" style="padding: 8px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/sass.png" style="padding: 10px;" />
+					</div>
+					<h6 class="subtitle-font pt-3 tools-font" style="padding-left: 6px;">Front-End</h6>
+				</div>
+				<div class="mobile">
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/flutter.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/ionic.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/react_native.jpg" style="padding: 5px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/xamarin.png" style="padding: 5px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/android.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/ios.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/firebase.png" />
+					</div>
+					<h6 class="subtitle-font pt-3 tools-font" style="padding-left: 6px;">Mobile</h6>
+				</div>
+				<div class="cloud">
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/digital-ocean.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/aws.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/google-cloud.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/heroku.png" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/linode.png" style="padding: 10px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/server.png" style="padding: 10px;" />
+					</div>
+					<div class="tools-logo px-4">
+						<img src="images/tools-we-use/kubernetes.png" style="padding: 10px;" />
+					</div>
+					<h6 class="subtitle-font pt-3 tools-font">Cloud</h6>
+				</div>
+			</div>
+		</div>
+		<div class="spacer-60"></div>
+	</section>
+
+	<section class="product">
+		<div class="container">
+			<div class="row text-center pb-4 pt-4">
+				<div class="col-md-1"></div>
+				<div class="col-md-3 align-self-center">
+					<h2 class="title-font m-0">Our Products</h2>
+				</div>
+				<div class="col-md-3 product-item">
+					<div class=" product-border">
+						<img
+								src="images/product-logo/medshoppe.jpg" />
+					</div>
+				</div>
+				<div class="col-md-3 product-item">
+					<div class="product-border">
+						<img
+								src="images/product-logo/campinfo.jpg" />
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section class="home-blog">
+		<div class="container">
+			<h2 class="text-center title-fontn pb-4">Blogs</h2>
+			<div class="row m-0 ">
+				<div class="col-md pr-0 pt-2">
+					<a href="blogs.html">
+						<p class="view-all text-right"><b>View All</b></p>
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<a href="blogs.html">
+						<div class="card">
+							<img src="images/blogs/http.png" alt="">
+							<div class="card-body">
+								<p><b>Restful Api Integration in flutter using http</b></p>
+								<div class="row m-0 pb-2">
+									<h6 class="text-uppercase">R Vinayagam</h6>
+									<h6 class="text-black-50">&nbsp;&nbsp;Feb 17, 2019</h6>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="blogs.html">
+						<div class="card">
+							<img src="images/blogs/alam-fire.jpg" alt="">
+							<div class="card-body">
+								<p><b>Alamofire  —  Upload array of images to Http in Swift</b></p>
+								<div class="row m-0 pb-2">
+									<h6 class="text-uppercase">S Sathish kumar</h6>
+									<h6 class="text-black-50">&nbsp;&nbsp;Feb 15, 2019</h6>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="blogs.html">
+						<div class="card">
+							<img src="images/blogs/channel_method.jpg" alt="">
+							<div class="card-body">
+								<p><b>Handling Run time Permissions in Flutter using MethodChannel</b></p>
+								<div class="row m-0 pb-2">
+									<h6 class="text-uppercase">M Pandiyarajan</h6>
+									<h6 class="text-black-50">&nbsp;&nbsp;Feb 19, 2019</h6>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section> -->
+
+	<section class="home-contact-us">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-2"></div>
+				<div class="col-md-5">
+					<div class="form-group">
+						<input type="email" class="form-control" id="email" placeholder="Enter your email">
+						<!-- <div class="invalid-feedback">Please enter your number.</div> -->
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="submit" onclick="" class="our-service-btn btn" style="width: 100%;"
+							value="Submit" />
+					</div>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our office section-->
+	<footer class="footer">
+		<section class="our-office">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center align-self-center">
+						<a href="#"> <img class="footer-logo" src="images/ssbsoft_white.png"></a>
+						<ul class="social" id="footer-social">
+							<li><a href="https://www.twitter.com/ssb_soft" target="_blank"><i
+										class="fa fa-twitter"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/ssbsoft" target="_blank"><i
+										class="fa fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com/ssbsoft/" target="_blank"><i
+										class="fa fa-facebook"></i></a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<p>New No.28, 1st Main Rd, </br>Shenoy Nagar West, </br>Chennai, Tamil Nadu 600030.</p>
+						<ul class="link mb-2">
+							<li><a href="#" style="text-transform: lowercase;"><i
+										class="fa fa-envelope-o"></i>&nbsp;contact@ssbsoft.com</a></li>
+							<li><a href="#"><i class="fa fa-phone left"></i>&nbsp;+91-44-43562324</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4">
+						<div class="spacer-27"></div>
+						<ul class="link">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="career.html">Careers</a></li>
+							<li><a href="about.html">About US</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+							<!-- <li><a href="blogs.html">Blog</a></li> -->
+							<!-- <li><a href="service.html">Why us?</a></li> -->
+						</ul>
+					</div>
+					<!-- <div class="col-md-3 pt-2 pb-2 ">
+						<h6 style="color: gray;" class="m-0">PRODUCTS</h6>
+						<ul class="link">
+							<li><a href="campinfo.html">CAMPINFO</a></li>
+							<li><a href="vitalsoft.html">VITALSOFT</a></li>
+							 <li><a href="medshoppe.html">MEDSHOPPE</a></li>
+						</ul>
+					</div> -->
+					<!-- <div class="col-md-2">
+						<div class="spacer-27"></div>
+						<ul class="link">
+							<li><a href="career.html">Careers</a></li>
+							<li><a href="about.html">About US</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+						</ul>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<!-- Footer section-->
+		<section class="copyright">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md">
+						© 2018 SSB Software Solutions Pvt. Ltd., All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+	<!-- Back to top -->
+	<a id="back-to-top" href="#" class="btn back-to-top" role="button" title="Click to return on the top page"
+		data-toggle="tooltip" data-placement="left"><span class="fa fa-chevron-up"></span></a>
+</body>
+
+</html>
